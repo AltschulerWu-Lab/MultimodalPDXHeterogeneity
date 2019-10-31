@@ -1,0 +1,38 @@
+function newCellArray = remove_from_cell_array(cellArray,row)
+% REMOVE_FROM_CELL_ARRAY - delete row in cell array
+%   NEWCELLARRAY = REMOVE_FROM_CELL_ARRAY(CELLARRAY,ROW) removes a specified
+%   row in a cell array and returns a new array missing that row, and with all
+%   subsequent rows moved up.
+% ------------------------------------------------------------------------------
+% Copyright ©2012, The University of Texas Southwestern Medical Center 
+% Authors:
+% Satwik Rajaram and Benjamin Pavie for the Altschuler and Wu Lab
+% For latest updates, check: < http://www.PhenoRipper.org >.
+%
+% All rights reserved.
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, version 3 of the License.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details:
+% < http://www.gnu.org/licenses/ >.
+%
+% ------------------------------------------------------------------------------
+%%
+
+if length(cellArray)==1
+    newCellArray=cell(0);
+    return;
+  end
+  newCellArray=cell(1,length(cellArray)-1);
+  j=1;
+  for i=1:length(cellArray)
+    if(i~=row)
+      newCellArray{j}=cellArray{i};
+      j=j+1;
+    end
+  end
+end
