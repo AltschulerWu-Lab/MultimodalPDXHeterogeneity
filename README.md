@@ -1,1 +1,3 @@
 # MultimodalPDXHeterogeneity
+
+Download all necessary data from: https://figshare.com/projects/CASIX_-_A_multi-modal_data_resource_for_investigating_topographic_heterogeneity_in_patient-derived_xenograft_tumors/69791
